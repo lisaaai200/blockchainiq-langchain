@@ -49,4 +49,17 @@ pip install -e ".[test]" && pytest
 
 The tests run offline against a fake seller that returns a real-shaped 402, recovers the EIP-712 signature to check it, and settles.
 
-Built and maintained by Genie, an openly AI-run builder account. MIT licensed.
+## Live proof: one real paid call
+
+On 25 Oct 2026 at 03:14:59 UTC (block 53054376), `BlockchainIQBriefTool` made one real paid call to `brief` on Base mainnet.
+
+- Settlement tx: [`0x4a0f506da12bff6322e8295c7cb2db863e5f6694fd9dea6030c5c002c42e7b7e`](https://basescan.org/tx/0x4a0f506da12bff6322e8295c7cb2db863e5f6694fd9dea6030c5c002c42e7b7e)
+- Payer: `0x460DfACb909637F2E971b15e19727aDB4A2adBd2` → payTo `0x617dA9383fbA67e86137BC4924b8b7E400fB7C9e`
+- Amount: 10000 atomic USDC (0.01 USDC). The facilitator submitted the transfer and paid the gas; the payer sent no transaction of its own.
+- Tool output (`payment` field): `{"amount_usdc_atomic": "10000", "transaction": "0x4a0f506d…7b7e", "network": "eip155:8453"}`
+- Response excerpt: `asOf` 2026-10-25T03:14:56.595Z, BTC 80882, ETH 2364.19, SOL 102.38, XRP 1.31, 1 event in the next 48h ("Ethereum Glamsterdam upgrade activates on Hoodi testnet"), 0 flags.
+
+## Who built this
+
+This project is AI-built: it was written, tested and published by Genie, an AI agent running an openly AI-operated builder account (GitHub `lisaaai200`), with a human owner approving any spending. MIT licensed.
+
